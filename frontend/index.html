@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#0a0a0a">
+<title>Casino Premium</title>
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<div id="app">
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">
+        <span class="logo-icon">◆</span>
+        <span class="logo-text">CASINO</span>
+      </div>
+      <button class="connect-btn" id="connect-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Connect
+      </button>
+    </div>
+    <div class="header-right">
+      <div class="balance-display" id="balance-display">
+        <span class="bal-star">★</span>
+        <span class="bal-amount" id="bal-amount">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" id="main">
+    <div class="screen active" id="screen-home">
+      <div class="hero">
+        <div class="hero-glow"></div>
+        <h1 class="hero-title">Добро пожаловать</h1>
+        <p class="hero-sub">Лучшие игры • Моментальные выплаты</p>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span class="section-icon fire">🔥</span>
+          Лучшие игры
+        </h2>
+        <div class="games-grid">
+          <button class="game-card gc-gold" data-game="crash">
+            <div class="gc-icon">✈</div>
+            <div class="gc-info">
+              <div class="gc-name">Crash</div>
+              <div class="gc-desc">Забери до x100</div>
+            </div>
+            <div class="gc-badge hot">HOT</div>
+          </button>
+          <button class="game-card gc-blue" data-game="tower">
+            <div class="gc-icon">⛏</div>
+            <div class="gc-info">
+              <div class="gc-name">Кирка</div>
+              <div class="gc-desc">8 рядов × 3</div>
+            </div>
+          </button>
+          <button class="game-card gc-purple" data-game="upgrader">
+            <div class="gc-icon">⬆</div>
+            <div class="gc-info">
+              <div class="gc-name">Апгрейдер</div>
+              <div class="gc-desc">До x10</div>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span class="section-icon bolt">⚡</span>
+          Быстрые игры
+        </h2>
+        <div class="games-grid">
+          <button class="game-card gc-green" data-game="mines">
+            <div class="gc-icon">💣</div>
+            <div class="gc-info">
+              <div class="gc-name">Мины</div>
+              <div class="gc-desc">5×6 поле</div>
+            </div>
+          </button>
+          <button class="game-card gc-teal" data-game="plinko">
+            <div class="gc-icon">●</div>
+            <div class="gc-info">
+              <div class="gc-name">Плинко</div>
+              <div class="gc-desc">До x20</div>
+            </div>
+          </button>
+          <button class="game-card gc-red" data-game="slots-classic">
+            <div class="gc-icon">7</div>
+            <div class="gc-info">
+              <div class="gc-name">Слоты</div>
+              <div class="gc-desc">Классические</div>
+            </div>
+          </button>
+          <button class="game-card gc-orange" data-game="slots-video">
+            <div class="gc-icon">🎰</div>
+            <div class="gc-info">
+              <div class="gc-name">Видео-слоты</div>
+              <div class="gc-desc">5×3 • 20 линий</div>
+            </div>
+          </button>
+          <button class="game-card gc-dark" data-game="roulette">
+            <div class="gc-icon rc">●</div>
+            <div class="gc-info">
+              <div class="gc-name">Рулетка</div>
+              <div class="gc-desc">Европейская + Американская</div>
+            </div>
+          </button>
+          <button class="game-card gc-cyan" data-game="dice">
+            <div class="gc-icon">🎲</div>
+            <div class="gc-info">
+              <div class="gc-name">Дайс</div>
+              <div class="gc-desc">1–100</div>
+            </div>
+          </button>
+          <button class="game-card gc-darkgold" data-game="blackjack">
+            <div class="gc-icon">A</div>
+            <div class="gc-info">
+              <div class="gc-name">Блекджек</div>
+              <div class="gc-desc">21 очко</div>
+            </div>
+          </button>
+          <button class="game-card gc-pink" data-game="cases">
+            <div class="gc-icon">📦</div>
+            <div class="gc-info">
+              <div class="gc-name">Кейсы</div>
+              <div class="gc-desc">Открывай и выигрывай</div>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span class="section-icon people">👥</span>
+          PVP-комнаты
+        </h2>
+        <div class="games-grid">
+          <button class="game-card gc-pvp" data-game="pvp-rps">
+            <div class="gc-icon">✊</div>
+            <div class="gc-info">
+              <div class="gc-name">Камень-Ножницы-Бумага</div>
+              <div class="gc-desc">PVP дуэль</div>
+            </div>
+          </button>
+          <button class="game-card gc-pvp2" data-game="pvp-bj">
+            <div class="gc-icon">🃏</div>
+            <div class="gc-info">
+              <div class="gc-name">Блекджек 21</div>
+              <div class="gc-desc">PVP дуэль</div>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span class="section-icon tap">👆</span>
+          Тапалка
+        </h2>
+        <div class="tap-area" id="tap-area">
+          <div class="tap-coin" id="tap-coin">
+            <span class="tap-star">★</span>
+          </div>
+          <div class="tap-info">
+            <div class="tap-reward">+0.5★ за тап</div>
+            <div class="tap-count">Сегодня: <span id="taps-today">0</span> / 1000</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="screen" id="screen-game">
+      <div class="game-header">
+        <button class="back-btn" id="back-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <h2 class="game-title" id="game-title"></h2>
+        <div class="game-balance" id="game-balance">★ 0</div>
+      </div>
+      <div class="game-body" id="game-body"></div>
+    </div>
+
+    <div class="screen" id="screen-cases">
+      <h2 class="page-title">Кейсы</h2>
+      <div class="cases-grid" id="cases-grid"></div>
+    </div>
+
+    <div class="screen" id="screen-leaders">
+      <h2 class="page-title">Лидеры</h2>
+      <div class="leaders-list" id="leaders-list"></div>
+    </div>
+
+    <div class="screen" id="screen-profile">
+      <div class="profile-card">
+        <div class="profile-avatar" id="profile-avatar">★</div>
+        <div class="profile-name" id="profile-name">Guest</div>
+        <div class="profile-id" id="profile-id">ID: 0</div>
+      </div>
+      <div class="profile-stats" id="profile-stats"></div>
+    </div>
+  </main>
+
+  <nav class="tabbar" id="tabbar">
+    <button class="tab active" data-tab="home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+      <span>Главная</span>
+    </button>
+    <button class="tab" data-tab="cases">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+      <span>Кейсы</span>
+    </button>
+    <button class="tab" data-tab="leaders">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-3 5h6l-3-5z"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Лидеры</span>
+    </button>
+    <button class="tab" data-tab="profile">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Профиль</span>
+    </button>
+  </nav>
+
+  <div class="modal-overlay" id="modal-overlay" style="display:none">
+    <div class="modal" id="modal">
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-body" id="modal-body"></div>
+      <button class="modal-close" id="modal-close">OK</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+</div>
+
+<script src="/js/app.js"></script>
+<script src="/js/games/crash.js"></script>
+<script src="/js/games/mines.js"></script>
+<script src="/js/games/plinko.js"></script>
+<script src="/js/games/tower.js"></script>
+<script src="/js/games/slots.js"></script>
+<script src="/js/games/roulette.js"></script>
+<script src="/js/games/blackjack.js"></script>
+<script src="/js/games/dice.js"></script>
+<script src="/js/games/upgrader.js"></script>
+<script src="/js/games/pvp.js"></script>
+<script src="/js/games/cases.js"></script>
+</body>
+</html>
